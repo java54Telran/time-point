@@ -10,8 +10,9 @@ HOUR(3600), MINUTE(60), SECOND(1);
 		return value;
 	}
 	public TimePoint between(TimePoint point1, TimePoint point2) {
-		//TODO
+		int diffAmount = point2.convert(this).getAmount() -
+				point1.convert(this).getAmount();
 		
-		return null;
+		return new TimePoint(diffAmount, this);
 	}
 }
